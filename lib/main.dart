@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:js_interop_part270_13/js_interop_example.dart';
+
+import 'core/theme/app_theme.dart';
+import 'data/datasources/web_utility_js_datasource.dart';
+import 'data/repositories/web_utility_repository_impl.dart';
+import 'presentation/pages/web_utility_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const WebUtilityDeskApp());
 }
 
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
+class WebUtilityDeskApp extends StatelessWidget {
+  const WebUtilityDeskApp({super.key});
 
   @override
-  Widget build(BuildContext context){
-    return const MaterialApp(
-      home:JSInteropExample() //JSInteropExample consists of Scaffold. A Scaffold must be wrapped with a MaterialApp (or WidgetsApp) because Scaffold needs: Directionality ,ThemeData ,Text direction (LTR/RTL) etc
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Web Utility Desk',
+      theme: AppTheme.build(),
+      home: WebUtilityPage(
+        repository: WebUtilityRepositoryImpl(
+          dataSource: WebUtilityJsDataSourceImpl(),
+        ),
+      ),
     );
-    
   }
 }
