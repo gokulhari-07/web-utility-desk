@@ -85,9 +85,9 @@ test/
 
 ## 🖼️ Screenshots
 
-| Dashboard | Voice Transcriber | Activity Log |
-|---|---|---|
-| ![](screenshots/dashboard.jpg) | ![](screenshots/voice_transcriber.jpg) | ![](screenshots/activity_log.jpg) |
+| Dashboard | Voice Transcriber | Mobile View 1 | Mobile View 2 |
+|---|---|---|---|
+| ![](screenshots/dashboard.jpg) | ![](screenshots/voice_transcriber.jpg) | ![](screenshots/mobile_view_1.jpg) | ![](screenshots/mobile_view_2.jpg) |
 
 ---
 
